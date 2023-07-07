@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMgr : Singleton<PlayerMgr>
 {
-    private Vector2 moveAmount;
-    
+    public Vector2 MoveAmount {get; private set; }
+    public bool FireIsBeingPressed {get; private set; }
     protected override void Awake()
     {
         base.Awake();
@@ -15,13 +13,13 @@ public class PlayerMgr : Singleton<PlayerMgr>
     [Header("Obj Refs")]
     public GameObject Player;
 
-    void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        moveAmount = context.ReadValue<Vector2>();
+        MoveAmount = context.ReadValue<Vector2>();
     }
 
-    void Update()
+    public void OnFire(InputAction.CallbackContext context)
     {
-        // Player.transform;
+        FireIsBeingPressed = context.action.IsInProgress();
     }
 }
