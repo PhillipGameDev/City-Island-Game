@@ -180,15 +180,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.04392112, g: 0.122641504, b: 0.014462439, a: 1}
+  m_Color: {r: 0.5, g: 0.125, b: 0.125, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_AdaptiveModeThreshold: 0.481
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 789482973}
-  tracker: {fileID: 0}
+  tracker: {fileID: 1775398311}
   containerHeight: 0
-  rateOfDescent: 0.001
-  rateOfAscent: 0.05
+  rateOfDescent: 0.0001
+  rateOfAscent: 0.03

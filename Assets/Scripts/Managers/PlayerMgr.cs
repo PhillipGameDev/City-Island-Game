@@ -5,6 +5,7 @@ public class PlayerMgr : Singleton<PlayerMgr>
 {
     public Vector2 MoveAmount {get; private set; }
     public bool FireIsBeingPressed {get; private set; }
+    public bool FireWasPressedThisFrame {get; private set; }
     protected override void Awake()
     {
         base.Awake();
@@ -21,5 +22,6 @@ public class PlayerMgr : Singleton<PlayerMgr>
     public void OnFire(InputAction.CallbackContext context)
     {
         FireIsBeingPressed = context.action.IsInProgress();
+
     }
 }

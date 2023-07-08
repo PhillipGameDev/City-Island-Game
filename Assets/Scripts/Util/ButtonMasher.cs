@@ -24,7 +24,7 @@ public class ButtonMasher : MonoBehaviour
             tracker.position -= new Vector3(0, containerHeight * rateOfDescent, 0);
         }
         
-        if (Input.GetKeyDown("space")){
+        if (Input.GetButtonDown("Fire1")){
             if (tracker.position.y + containerHeight * rateOfAscent > containerHeight/2.0f) {
                 tracker.position = new Vector3(tracker.position.x, containerHeight/2.0f, tracker.position.z);
             } else {
