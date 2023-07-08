@@ -56,7 +56,7 @@ public class ButtonMasher : MonoBehaviour
 
         } else if (timeRemaining <= 0 && !gameOver){
             Debug.Log("Survived!");
-            gameObject.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         } else {
             Debug.Log("You got caught!");
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
