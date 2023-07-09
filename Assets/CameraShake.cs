@@ -6,7 +6,7 @@ public class CameraShake : MonoBehaviour {
 
 	Vector3 cameraInitialPosition;
 	public float shakeMagnitude = 0.05f, shakeTime = 2.0f;
-	public Camera mainCamera;
+	public GameObject mainCamera;
 
 	public void ShakeIt(float sm, float st)
 	{

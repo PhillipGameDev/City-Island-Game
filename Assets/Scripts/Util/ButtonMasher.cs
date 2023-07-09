@@ -7,8 +7,27 @@ public class ButtonMasher : MonoBehaviour
 {
     public Transform container;
     public Transform tracker;
-    public Image fillBar;
+    public Transform clockhand;
     public CameraShake cameraShake;
+
+    public SpriteRenderer face;
+    public SpriteRenderer arms;
+    public SpriteRenderer dog;
+
+    public Sprite normalDog;
+    public Sprite madDog;
+    public Sprite doneDog;
+    public Sprite arms3;
+    public Sprite arms2;
+    public Sprite normalFace;
+    public Sprite faceDown;
+    public Sprite faceUp;
+    public Sprite face1;
+    public Sprite face2;
+    public Sprite face3;
+    public Sprite faceNotClicking;
+    public Sprite deadFace;
+
     public float containerHeight;
     public float rateOfDescent;
     public float rateOfAscent;
@@ -18,13 +37,14 @@ public class ButtonMasher : MonoBehaviour
     public float cheeseShakeAmount;
 
     private float timeRemaining;
-    private float fillBarHeight;
     private bool gameOver = false;
     private float distanceBeforeDeath = 0.5f;
     private float firstStageTime;
     private float secondStageTime;
     private bool timerPaused = false;
     private bool moveRight;
+    private Sprite defaultFace;
+    private int buttonClicks;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +54,7 @@ public class ButtonMasher : MonoBehaviour
         timeRemaining = time;
         secondStageTime = time/3.0f;
         firstStageTime = secondStageTime * 2.0f; 
+        defaultFace = face1;
     }
 
     // Update is called once per frame
@@ -54,9 +75,15 @@ public class ButtonMasher : MonoBehaviour
                 incrementFrame();
             } else if (timeRemaining <= 0 && !gameOver){
                 Debug.Log("Survived!");
+                dog.sprite = doneDog;
+                timerPaused = true;
+                face.sprite = normalFace;
                 gameObject.GetComponent<SpriteRenderer>().color = Color.green;
             } else {
                 Debug.Log("You got caught!");
+                timerPaused = true;
+                dog.sprite = normalDog;
+                face.sprite = deadFace;
                 gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             }
         } else {
@@ -71,12 +98,10 @@ public class ButtonMasher : MonoBehaviour
     void cheeseWobble() {
 
         if (tracker.localPosition.x < -cheeseShakeAmount) {
-            Debug.Log("reached here");
             moveRight = true;
         }
         
         if (tracker.localPosition.x > cheeseShakeAmount) {
-            Debug.Log("reached here 2");
             moveRight = false;
         } 
         
@@ -89,7 +114,7 @@ public class ButtonMasher : MonoBehaviour
 
     void incrementFrame(){
         timeRemaining -= Time.deltaTime;
-        fillBar.fillAmount -= 1.0f / time * Time.deltaTime;
+        clockhand.Rotate(0.0f, 0.0f, -360f/time * Time.deltaTime, Space.Self);
 
         if(tracker.localPosition.y > -1 * distanceBeforeDeath) {
             tracker.position -= new Vector3(0, containerHeight * rateOfDescent * Time.deltaTime, 0);
@@ -98,41 +123,63 @@ public class ButtonMasher : MonoBehaviour
         }
         
         if (Input.GetButtonDown("Fire1")){
+            face.sprite = defaultFace;
             if (tracker.localPosition.y > distanceBeforeDeath) {
                 gameOver = true;
             } else {
                 tracker.position += new Vector3(0, containerHeight * rateOfAscent, 0);
             }
-        }
+        } 
         //very temp testing win condition
         if(Input.GetKeyDown("space")) {
             timeRemaining = 0;
         }
     }
 
+    void FixedUpdate () {
+    	if(!Input.GetButton("Fire1") && !timerPaused){
+    		buttonClicks = buttonClicks + 1;
+    	} else {
+    		buttonClicks = 0;
+    	}
+
+    	if (buttonClicks >= 20) {
+            face.sprite = faceNotClicking;
+    		buttonClicks = 0;
+    	}
+    
+    }
+
     IEnumerator moveToSecondPhase() {
         Debug.Log("Second Phase Begins");
-        fillBar.color = Color.yellow;
         timerPaused = true;
         cheeseShakeAmount = cheeseShakeAmount * 4;
-        cameraShake.ShakeIt(0.05f, 2.0f);
+        face.sprite = faceDown;
+        dog.sprite = madDog;
+        cameraShake.ShakeIt(0.03f, 2.0f);
         rateOfDescent = rateOfDescent + ((maxRateOfDescent - rateOfDescent)/2);
         rateOfAscent = rateOfAscent - ((rateOfAscent - minRateOfAscent)/2);
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(2.0f);
+        defaultFace = face2;
+        arms.sprite = arms2;
         timerPaused = false;
         cheeseShakeAmount = cheeseShakeAmount/2;
-        cameraShake.ShakeIt(0.01f, time/3.0f);
+        dog.sprite = normalDog;
+        cameraShake.ShakeIt(0.01f, time/3.0f - 0.1f);
     }
 
     IEnumerator moveToThirdPhase() {
         Debug.Log("Third Phase Begins");
-        fillBar.color = Color.red;
         timerPaused = true;
         cheeseShakeAmount = cheeseShakeAmount * 8;
-        cameraShake.ShakeIt(0.10f, 3.0f);
+        face.sprite = faceDown;
+        dog.sprite = madDog;
+        cameraShake.ShakeIt(0.04f, 2.0f);
         rateOfDescent = maxRateOfDescent;
         rateOfAscent = minRateOfAscent;
-        yield return new WaitForSeconds(3.1f);
+        yield return new WaitForSeconds(2.0f);
+        defaultFace = face3;
+        arms.sprite = arms3;
         timerPaused = false;
         cheeseShakeAmount = cheeseShakeAmount/4;
         cameraShake.ShakeIt(0.02f, time/3.0f);
