@@ -16,6 +16,7 @@ public class ButtonMasher : MonoBehaviour
     public SpriteRenderer dog;
     public GameObject overlayText;
     public GameObject spaceBar;
+    public GameObject aButton;
 
     public Sprite normalDog;
     public Sprite madDog;
@@ -34,6 +35,8 @@ public class ButtonMasher : MonoBehaviour
     public Sprite deathText;
     public Sprite spaceBarUp;
     public Sprite spaceBarDown;
+    public Sprite aButtonUp;
+    public Sprite aButtonDown;
 
     public UnityEvent[] events;
 
@@ -107,7 +110,7 @@ public class ButtonMasher : MonoBehaviour
                 dog.sprite = normalDog;
                 face.sprite = deadFace;
                 gameOver = true;
-                deathScene();
+                StartCoroutine(deathScene());
             }
         } else if (gameStart && !gameOver) {
             if (tracker.localPosition.y > (-1 * distanceBeforeDeath) + distanceBeforeDeath/8.0f) {
@@ -168,7 +171,8 @@ public class ButtonMasher : MonoBehaviour
     
     }
 
-    void deathScene(){
+    IEnumerator deathScene(){
+        yield return new WaitForSeconds(0.5f);
         overlayText.GetComponent<SpriteRenderer>().sprite = deathText;
         overlayText.SetActive(true);
     }
@@ -213,6 +217,7 @@ public class ButtonMasher : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         overlayText.SetActive(false);
         spaceBar.SetActive(false);
+        aButton.SetActive(false);
         timerPaused = false;
         gameStart = true;
     }
@@ -227,8 +232,10 @@ public class ButtonMasher : MonoBehaviour
 
     IEnumerator toggleSpaceBarOnce() {
         spaceBar.GetComponent<SpriteRenderer>().sprite = spaceBarDown;
+        aButton.GetComponent<SpriteRenderer>().sprite = aButtonDown;
         yield return new WaitForSeconds(0.2f);
         spaceBar.GetComponent<SpriteRenderer>().sprite = spaceBarUp;
+        aButton.GetComponent<SpriteRenderer>().sprite = aButtonUp;
         yield return new WaitForSeconds(0.2f);
     }
 }
