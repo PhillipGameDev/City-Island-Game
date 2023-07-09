@@ -17,6 +17,7 @@ public class ButtonMasher : MonoBehaviour
     public GameObject overlayText;
     public GameObject spaceBar;
     public GameObject aButton;
+    public GameObject winScreen;
 
     public Sprite normalDog;
     public Sprite madDog;
@@ -78,6 +79,7 @@ public class ButtonMasher : MonoBehaviour
         timerPaused = true;
         StartCoroutine(runTutorial());
         gameStart = false;
+        winScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -104,6 +106,7 @@ public class ButtonMasher : MonoBehaviour
                 timerPaused = true;
                 face.sprite = normalFace;
                 gameOver = true;
+                StartCoroutine(winScene());
             } else {
                 Debug.Log("You got caught!");
                 timerPaused = true;
@@ -171,10 +174,16 @@ public class ButtonMasher : MonoBehaviour
     
     }
 
+    IEnumerator winScene(){
+        yield return new WaitForSeconds(1.0f);
+        winScreen.SetActive(true);
+    }
+
     IEnumerator deathScene(){
         yield return new WaitForSeconds(0.5f);
         overlayText.GetComponent<SpriteRenderer>().sprite = deathText;
         overlayText.SetActive(true);
+        GameMgr.Instance.lossAndWaitLoadScene(3.0f);
     }
 
     IEnumerator moveToSecondPhase() {
