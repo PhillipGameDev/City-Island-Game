@@ -1230,7 +1230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 789482973}
   tracker: {fileID: 0}
-  fillBar: {fileID: 0}
   clockhand: {fileID: 1726554838}
   cameraShake: {fileID: 789482974}
   face: {fileID: 374545921}
@@ -1249,6 +1248,7 @@ MonoBehaviour:
   face3: {fileID: 21300000, guid: 6a7462db2c3906b4e86291041b7ae190, type: 3}
   faceNotClicking: {fileID: 21300000, guid: 8081f1e8e13320c4280a0b7d53b2cad0, type: 3}
   deadFace: {fileID: 21300000, guid: 72c21f33b7efbc44c94a645c8cd17be3, type: 3}
+  events: []
   containerHeight: 0
   rateOfDescent: 0.07
   rateOfAscent: 0.02

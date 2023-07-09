@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ButtonMasher : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class ButtonMasher : MonoBehaviour
     public Sprite faceNotClicking;
     public Sprite deadFace;
 
+    public UnityEvent[] events;
+
     public float containerHeight;
     public float rateOfDescent;
     public float rateOfAscent;
@@ -46,6 +49,13 @@ public class ButtonMasher : MonoBehaviour
     private Sprite defaultFace;
     private int buttonClicks;
 
+    void callAllUnityEvents() {
+        foreach (UnityEvent e in events)
+        {
+            e.Invoke();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,8 +70,10 @@ public class ButtonMasher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cheeseWobble();
-
+        if (!gameOver){
+            cheeseWobble();
+        }
+        
         if (!timerPaused) {
             if (timeRemaining > firstStageTime && timeRemaining - Time.deltaTime <= firstStageTime) {
                 StartCoroutine(moveToSecondPhase());
@@ -78,13 +90,13 @@ public class ButtonMasher : MonoBehaviour
                 dog.sprite = doneDog;
                 timerPaused = true;
                 face.sprite = normalFace;
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameOver = true;
             } else {
                 Debug.Log("You got caught!");
                 timerPaused = true;
                 dog.sprite = normalDog;
                 face.sprite = deadFace;
-                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                gameOver = true;
             }
         } else {
             if(tracker.localPosition.y > (-1 * distanceBeforeDeath) + distanceBeforeDeath/8.0f) {
@@ -116,13 +128,13 @@ public class ButtonMasher : MonoBehaviour
         timeRemaining -= Time.deltaTime;
         clockhand.Rotate(0.0f, 0.0f, -360f/time * Time.deltaTime, Space.Self);
 
-        if(tracker.localPosition.y > -1 * distanceBeforeDeath) {
+        if(tracker.localPosition.y > -1 * distanceBeforeDeath && !gameOver) {
             tracker.position -= new Vector3(0, containerHeight * rateOfDescent * Time.deltaTime, 0);
         } else {
             gameOver = true;
         }
         
-        if (Input.GetButtonDown("Fire1")){
+        if (Input.GetButtonDown("Jump") && !gameOver){
             face.sprite = defaultFace;
             if (tracker.localPosition.y > distanceBeforeDeath) {
                 gameOver = true;
@@ -130,14 +142,10 @@ public class ButtonMasher : MonoBehaviour
                 tracker.position += new Vector3(0, containerHeight * rateOfAscent, 0);
             }
         } 
-        //very temp testing win condition
-        if(Input.GetKeyDown("space")) {
-            timeRemaining = 0;
-        }
     }
 
     void FixedUpdate () {
-    	if(!Input.GetButton("Fire1") && !timerPaused){
+    	if(!Input.GetButton("Jump") && !timerPaused){
     		buttonClicks = buttonClicks + 1;
     	} else {
     		buttonClicks = 0;
