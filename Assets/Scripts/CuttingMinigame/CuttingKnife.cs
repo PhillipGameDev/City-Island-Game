@@ -5,6 +5,7 @@ using UnityEngine;
 public class CuttingKnife : MonoBehaviour
 {
     private Rigidbody2D target;
+    private bool hasCut;
     private enum KnifeActions {
         WANDERING = 0,
         TRACKING,
@@ -69,6 +70,7 @@ public class CuttingKnife : MonoBehaviour
         KnifeActions NextAction;
         switch (CurrentAction) {
              case KnifeActions.WANDERING:
+                hasCut = false;
                 CancelInvoke();
                 DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Neutral);
                 NextAction = KnifeActions.TRACKING;
@@ -132,7 +134,9 @@ public class CuttingKnife : MonoBehaviour
             wasCutThisCycle = true;
             CuttingMinigameManager.Instance.GotHit();
             // DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Happy);
-        } else {
+        } else if (!hasCut) {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.knifeMiss, this.transform.position);
+            hasCut = true;
             Invoke(nameof(MakeDogAnnoyed), 0.1f);
         }
         return isTouchingPlayer;

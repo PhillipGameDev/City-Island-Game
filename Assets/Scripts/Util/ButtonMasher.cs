@@ -102,6 +102,7 @@ public class ButtonMasher : MonoBehaviour
                 incrementFrame();
             } else if (timeRemaining <= 0 && !gameOver){
                 Debug.Log("Survived!");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.success, this.transform.position);
                 dog.sprite = doneDog;
                 timerPaused = true;
                 face.sprite = normalFace;
@@ -109,6 +110,8 @@ public class ButtonMasher : MonoBehaviour
                 StartCoroutine(winScene());
             } else {
                 Debug.Log("You got caught!");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.failure, this.transform.position);
+
                 timerPaused = true;
                 dog.sprite = normalDog;
                 face.sprite = deadFace;
@@ -188,6 +191,7 @@ public class ButtonMasher : MonoBehaviour
 
     IEnumerator moveToSecondPhase() {
         Debug.Log("Second Phase Begins");
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.chips, this.transform.position);
         timerPaused = true;
         cheeseShakeAmount = cheeseShakeAmount * 4;
         face.sprite = faceDown;
@@ -206,6 +210,7 @@ public class ButtonMasher : MonoBehaviour
 
     IEnumerator moveToThirdPhase() {
         Debug.Log("Third Phase Begins");
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.chips, this.transform.position);
         timerPaused = true;
         cheeseShakeAmount = cheeseShakeAmount * 8;
         face.sprite = faceDown;
@@ -229,6 +234,7 @@ public class ButtonMasher : MonoBehaviour
         aButton.SetActive(false);
         timerPaused = false;
         gameStart = true;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.chips, this.transform.position);
     }
 
     IEnumerator runSpaceBar() {

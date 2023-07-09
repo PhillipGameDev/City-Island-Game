@@ -1516,6 +1516,119 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1621358056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621358059}
+  - component: {fileID: 1621358058}
+  - component: {fileID: 1621358057}
+  m_Layer: 0
+  m_Name: AudioMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1621358057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621358056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2482459101cea11468e6a57f0d95536a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <sizzling>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <music>k__BackingField:
+    Guid:
+      Data1: 1985741506
+      Data2: 1288600893
+      Data3: -1851468100
+      Data4: -689219632
+    Path: event:/Music/MetalMusic
+  <knifeSlice>k__BackingField:
+    Guid:
+      Data1: -2132467166
+      Data2: 1191326214
+      Data3: 370928031
+      Data4: -1548067594
+    Path: event:/SFX/KnifeSlice
+  <knifeMiss>k__BackingField:
+    Guid:
+      Data1: 95093127
+      Data2: 1341811770
+      Data3: -540609129
+      Data4: 1878716740
+    Path: event:/SFX/KnifeMiss
+  <chips>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <doggo>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <success>k__BackingField:
+    Guid:
+      Data1: -1263848365
+      Data2: 1180876087
+      Data3: -901511534
+      Data4: -620404420
+    Path: event:/SFX/Success
+  <failure>k__BackingField:
+    Guid:
+      Data1: 1617224901
+      Data2: 1245212544
+      Data3: -900322425
+      Data4: 1556876625
+    Path: event:/SFX/ChurchBell
+--- !u!114 &1621358058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621358056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bc3f5ae518e00498e0a6a69d21fb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1621358059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621358056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 822.4391, y: 113.740875, z: -18.281328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749566125
 GameObject:
   m_ObjectHideFlags: 0

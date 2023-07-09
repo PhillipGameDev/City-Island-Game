@@ -25,7 +25,7 @@ public class GameMgr : Singleton<GameMgr> {
     
     public SceneField[] scenes;   
 
-    private int currentScene;   
+    [SerializeField] private int currentScene;   
 
     private new void Awake()
     {
@@ -74,7 +74,7 @@ public class GameMgr : Singleton<GameMgr> {
     }
 
     public void waitAndLoadNextScene(float waitTime) {
-        StartCoroutine(waitSecondsThenLoad(waitTime));
+        StartCoroutine(waitSecondsThenLoadLossScene(waitTime));
     }
 
     public void lossAndWaitLoadScene(float waitTime){

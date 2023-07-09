@@ -123,6 +123,105 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &491447575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 491447578}
+  - component: {fileID: 491447577}
+  - component: {fileID: 491447576}
+  m_Layer: 0
+  m_Name: AudioMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &491447576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491447575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2482459101cea11468e6a57f0d95536a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <sizzling>k__BackingField:
+    Guid:
+      Data1: -807262673
+      Data2: 1233324346
+      Data3: -167744855
+      Data4: -1694898195
+    Path: event:/Ambiance/sizzling
+  <music>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <knifeSlice>k__BackingField:
+    Guid:
+      Data1: -2132467166
+      Data2: 1191326214
+      Data3: 370928031
+      Data4: -1548067594
+    Path: event:/SFX/KnifeSlice
+  <chips>k__BackingField:
+    Guid:
+      Data1: 1492279377
+      Data2: 1187005459
+      Data3: -47244358
+      Data4: 894637661
+    Path: event:/SFX/Chips
+  <success>k__BackingField:
+    Guid:
+      Data1: -1263848365
+      Data2: 1180876087
+      Data3: -901511534
+      Data4: -620404420
+    Path: event:/SFX/Success
+  <failure>k__BackingField:
+    Guid:
+      Data1: -1895894667
+      Data2: 1282712770
+      Data3: 600611470
+      Data4: 447946337
+    Path: event:/SFX/Failure
+--- !u!114 &491447577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491447575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bc3f5ae518e00498e0a6a69d21fb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &491447578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491447575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 822.4391, y: 113.740875, z: -18.281328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &812669174
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,10 +389,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - m_SceneAsset: {fileID: 102900000, guid: 0261fcc1f81a5e146b270f786bd9f79e, type: 3}
-    m_SceneName: menuFAKE
-  - m_SceneAsset: {fileID: 102900000, guid: 1cd62546e0b982b49bee5cc12c7f2d42, type: 3}
-    m_SceneName: cutsceneFAKE
+  - m_SceneAsset: {fileID: 102900000, guid: bd01332a359e08e4a8c47b6f4db1aa21, type: 3}
+    m_SceneName: MainMenu
+  - m_SceneAsset: {fileID: 102900000, guid: bd01332a359e08e4a8c47b6f4db1aa21, type: 3}
+    m_SceneName: MainMenu
   - m_SceneAsset: {fileID: 102900000, guid: cb84c4c1850d0d1479cd638de9520a6a, type: 3}
     m_SceneName: PanFAKE
   - m_SceneAsset: {fileID: 102900000, guid: 0720f78860011514fab998c0981973dd, type: 3}

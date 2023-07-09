@@ -7,6 +7,7 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
 {
     public int LivesCount;
     public int MaxLives;
+    private bool playedSound = false;
     [SerializeField] private UnityEvent OnLoseEvents;
     [SerializeField] private UnityEvent OnWinEvents;
     [SerializeField] private SpriteRenderer OverlayIntro;
@@ -33,6 +34,7 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
     public void GotHit()
     {
         LivesCount--;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.knifeSlice, this.transform.position);
         if (LivesCount <= 0)
         {
             Die();
@@ -41,6 +43,11 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
 
     public void Win()
     {
+        if (!playedSound)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.success, this.transform.position);
+            playedSound = true;
+        }
         WinScreen.enabled = true;
         GameMgr.Instance.waitAndLoadNextScene(1.0f);
     }
@@ -48,6 +55,7 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
     void Die()
     {
         // death animations?
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.failure, this.transform.position);
         LettuceAnimatorMgr.Instance.Die();
         DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Happy);
         DeathOverlay.enabled = true;
