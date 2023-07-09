@@ -14,6 +14,8 @@ public class ButtonMasher : MonoBehaviour
     public SpriteRenderer face;
     public SpriteRenderer arms;
     public SpriteRenderer dog;
+    public GameObject overlayText;
+    public GameObject spaceBar;
 
     public Sprite normalDog;
     public Sprite madDog;
@@ -28,6 +30,10 @@ public class ButtonMasher : MonoBehaviour
     public Sprite face3;
     public Sprite faceNotClicking;
     public Sprite deadFace;
+    public Sprite dangerText;
+    public Sprite deathText;
+    public Sprite spaceBarUp;
+    public Sprite spaceBarDown;
 
     public UnityEvent[] events;
 
@@ -48,6 +54,7 @@ public class ButtonMasher : MonoBehaviour
     private bool moveRight;
     private Sprite defaultFace;
     private int buttonClicks;
+    private bool gameStart;
 
     void callAllUnityEvents() {
         foreach (UnityEvent e in events)
@@ -65,12 +72,15 @@ public class ButtonMasher : MonoBehaviour
         secondStageTime = time/3.0f;
         firstStageTime = secondStageTime * 2.0f; 
         defaultFace = face1;
+        timerPaused = true;
+        StartCoroutine(runTutorial());
+        gameStart = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver){
+        if (!gameOver && gameStart){
             cheeseWobble();
         }
         
@@ -97,12 +107,12 @@ public class ButtonMasher : MonoBehaviour
                 dog.sprite = normalDog;
                 face.sprite = deadFace;
                 gameOver = true;
+                deathScene();
             }
-        } else {
-            if(tracker.localPosition.y > (-1 * distanceBeforeDeath) + distanceBeforeDeath/8.0f) {
+        } else if (gameStart && !gameOver) {
+            if (tracker.localPosition.y > (-1 * distanceBeforeDeath) + distanceBeforeDeath/8.0f) {
                 tracker.position -= new Vector3(0, containerHeight * rateOfDescent * Time.deltaTime, 0);
             }
-            
         }
         
     }
@@ -158,6 +168,11 @@ public class ButtonMasher : MonoBehaviour
     
     }
 
+    void deathScene(){
+        overlayText.GetComponent<SpriteRenderer>().sprite = deathText;
+        overlayText.SetActive(true);
+    }
+
     IEnumerator moveToSecondPhase() {
         Debug.Log("Second Phase Begins");
         timerPaused = true;
@@ -191,5 +206,29 @@ public class ButtonMasher : MonoBehaviour
         timerPaused = false;
         cheeseShakeAmount = cheeseShakeAmount/4;
         cameraShake.ShakeIt(0.02f, time/3.0f);
+    }
+
+    IEnumerator runTutorial(){
+        StartCoroutine(runSpaceBar());
+        yield return new WaitForSeconds(3.0f);
+        overlayText.SetActive(false);
+        spaceBar.SetActive(false);
+        timerPaused = false;
+        gameStart = true;
+    }
+
+    IEnumerator runSpaceBar() {
+        for (int i = 0; i < 15; i++)
+        {
+            StartCoroutine(toggleSpaceBarOnce());
+            yield return new WaitForSeconds(0.4f);
+        }
+    }
+
+    IEnumerator toggleSpaceBarOnce() {
+        spaceBar.GetComponent<SpriteRenderer>().sprite = spaceBarDown;
+        yield return new WaitForSeconds(0.2f);
+        spaceBar.GetComponent<SpriteRenderer>().sprite = spaceBarUp;
+        yield return new WaitForSeconds(0.2f);
     }
 }
