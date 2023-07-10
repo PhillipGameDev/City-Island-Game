@@ -22,6 +22,7 @@ public class DogMoodManager : Singleton<DogMoodManager>
     public Sprite annoyedSprite;
     public Sprite neutralSprite;
     public Sprite happySprite;
+    [SerializeField] private float moodDuration;
     
     [SerializeField] private DogMoods currentMood;
 
@@ -42,6 +43,15 @@ public class DogMoodManager : Singleton<DogMoodManager>
                 spriteRenderer.sprite = happySprite;
                 break;
         }
+    }
+    public void SetMoodTemporary(DogMoods newMood)
+    {
+        SetMood(newMood);
+        Invoke(nameof(ClearMood), moodDuration);
+    }
+    void ClearMood()
+    {
+        spriteRenderer.sprite = neutralSprite;
     }
 
     // Start is called before the first frame update

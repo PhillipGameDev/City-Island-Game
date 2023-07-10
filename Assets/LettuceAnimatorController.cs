@@ -17,6 +17,7 @@ public class LettuceAnimatorMgr : Singleton<LettuceAnimatorMgr>
     public Animator AnimationController;
     [SerializeField] float animationSpeed;
     [SerializeField] LettuceMoods currentMood; 
+    [SerializeField] private float moodDuration;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,15 @@ public class LettuceAnimatorMgr : Singleton<LettuceAnimatorMgr>
                 UpsetFace.enabled = true;
                 break;
         }
+    }
+    public void SetMoodTemporary(LettuceMoods newMood)
+    {
+        SetMood(newMood);
+        Invoke(nameof(ClearMood), moodDuration);
+    }
+    private void ClearMood()
+    {
+        SetMood(LettuceMoods.Happy);
     }
     public void Die()
     {

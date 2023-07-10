@@ -13,13 +13,14 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
     [SerializeField] private SpriteRenderer OverlayIntro;
     [SerializeField] private SpriteRenderer DeathOverlay;
     [SerializeField] private SpriteRenderer WinScreen;
-
+    public bool isGameOver;
     protected override void Awake()
     {
         base.Awake();
     }
     void Start()
     {
+        isGameOver = false;
         LivesCount = MaxLives;
         OverlayIntro.enabled = true;
         DeathOverlay.enabled = false;
@@ -43,18 +44,23 @@ public class CuttingMinigameManager : Singleton<CuttingMinigameManager>
 
     public void Win()
     {
+        if (isGameOver)
+            return;
+        isGameOver = true;
         if (!playedSound)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.success, this.transform.position);
             playedSound = true;
         }
         WinScreen.enabled = true;
-        GameMgr.Instance.waitAndLoadNextScene(1.0f);
+        GameMgr.Instance.waitAndLoadNextScene(3.0f);
     }
 
     void Die()
     {
-        // death animations?
+        if (isGameOver)
+            return;
+        isGameOver = true;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.failure, this.transform.position);
         LettuceAnimatorMgr.Instance.Die();
         DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Happy);

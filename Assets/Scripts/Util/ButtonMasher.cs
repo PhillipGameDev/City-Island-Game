@@ -180,6 +180,7 @@ public class ButtonMasher : MonoBehaviour
     IEnumerator winScene(){
         yield return new WaitForSeconds(1.0f);
         winScreen.SetActive(true);
+        GameMgr.Instance.waitAndLoadNextScene(3.0f);
     }
 
     IEnumerator deathScene(){

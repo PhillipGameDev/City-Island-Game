@@ -670,14 +670,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - m_SceneAsset: {fileID: 102900000, guid: bd01332a359e08e4a8c47b6f4db1aa21, type: 3}
+  - m_SceneAsset: {fileID: 102900000, guid: a8e20b302c337ae49973e3d601464a7f, type: 3}
     m_SceneName: MainMenu
   - m_SceneAsset: {fileID: 102900000, guid: 1cd62546e0b982b49bee5cc12c7f2d42, type: 3}
     m_SceneName: IntroCutscene
   - m_SceneAsset: {fileID: 102900000, guid: ab0ee3b0cbf6cbb4e98a72a7250882f8, type: 3}
     m_SceneName: IntroCutscene2
-  - m_SceneAsset: {fileID: 102900000, guid: cb84c4c1850d0d1479cd638de9520a6a, type: 3}
-    m_SceneName: PanFAKE
   - m_SceneAsset: {fileID: 102900000, guid: 0720f78860011514fab998c0981973dd, type: 3}
     m_SceneName: Cheese Game
   - m_SceneAsset: {fileID: 102900000, guid: 916536c18c0a9804fba86f739a5103dc, type: 3}
@@ -686,6 +684,7 @@ MonoBehaviour:
     m_SceneName: SuccessCutscene
   - m_SceneAsset: {fileID: 102900000, guid: 5b88e11a03437cd4482cfbadb539ce84, type: 3}
     m_SceneName: CreditsScene
+  currentScene: 0
 --- !u!4 &1139076868
 Transform:
   m_ObjectHideFlags: 0

@@ -62,6 +62,8 @@ public class CuttingKnife : MonoBehaviour
     }
     void Update()
     {
+        if (CuttingMinigameManager.Instance.isGameOver)
+            return;
         ActionTimeLeft -= Time.deltaTime;
         if (ActionTimeLeft > 0)
         {
@@ -72,7 +74,6 @@ public class CuttingKnife : MonoBehaviour
              case KnifeActions.WANDERING:
                 hasCut = false;
                 CancelInvoke();
-                DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Neutral);
                 NextAction = KnifeActions.TRACKING;
                 ActionTimeLeft = TrackingActionDuration;
                 break;   
@@ -133,8 +134,9 @@ public class CuttingKnife : MonoBehaviour
         {
             wasCutThisCycle = true;
             CuttingMinigameManager.Instance.GotHit();
-            // DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Happy);
-        } else if (!hasCut) {
+            DogMoodManager.Instance.SetMoodTemporary(DogMoodManager.DogMoods.Happy);
+            LettuceAnimatorMgr.Instance.SetMoodTemporary(LettuceAnimatorMgr.LettuceMoods.Upset);
+        } else if (!hasCut && !wasCutThisCycle) {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.knifeMiss, this.transform.position);
             hasCut = true;
             Invoke(nameof(MakeDogAnnoyed), 0.1f);
@@ -144,11 +146,13 @@ public class CuttingKnife : MonoBehaviour
 
     void MakeDogAnnoyed()
     {
-        DogMoodManager.Instance.SetMood(DogMoodManager.DogMoods.Annoyed);
+        DogMoodManager.Instance.SetMoodTemporary(DogMoodManager.DogMoods.Annoyed);
     }
 
     void FixedUpdate()
     {
+        if (CuttingMinigameManager.Instance.isGameOver)
+            return;
         switch (CurrentAction) {
             // case KnifeActions.WANDERING:
                 

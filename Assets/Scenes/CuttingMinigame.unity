@@ -383,7 +383,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138242499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -911,7 +911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899352975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.011, y: -0.027, z: 0}
+  m_LocalPosition: {x: -0.011, y: -0.027, z: -0.26}
   m_LocalScale: {x: 0.3035868, y: 0.3035868, z: 0.3035868}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -925,7 +925,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899352975}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1071,6 +1071,7 @@ MonoBehaviour:
   annoyedSprite: {fileID: 597559465, guid: 152a02a85580f0d40804635f5c8a3a31, type: 3}
   neutralSprite: {fileID: -1009243304, guid: 152a02a85580f0d40804635f5c8a3a31, type: 3}
   happySprite: {fileID: 21300000, guid: 3f0e212a3e36fc847adbc93638c95a69, type: 3}
+  moodDuration: 2
   currentMood: 0
 --- !u!1 &1354973979
 GameObject:
@@ -1844,6 +1845,7 @@ MonoBehaviour:
   OverlayIntro: {fileID: 366207055}
   DeathOverlay: {fileID: 1441000236}
   WinScreen: {fileID: 115701333}
+  isGameOver: 0
 --- !u!1 &1986947111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,6 +1898,7 @@ MonoBehaviour:
   AnimationController: {fileID: 1986947114}
   animationSpeed: 0
   currentMood: 0
+  moodDuration: 1.5
 --- !u!95 &1986947114
 Animator:
   serializedVersion: 5

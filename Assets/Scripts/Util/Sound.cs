@@ -9,6 +9,7 @@ public class Sound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.StopMusic();
         PlayOneShot(FMODEvents.instance.doggo, this.transform.position);
     }
 
