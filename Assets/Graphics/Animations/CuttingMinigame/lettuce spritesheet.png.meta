@@ -1,0 +1,891 @@
+fileFormatVersion: 2
+guid: e3f310f7d3511bb419aa2b6e2b60fccd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 480
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lettuce spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 5381
+        width: 466
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc12acf0ed99a84886aa3ba98914e3b
+      internalID: -181480838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 5381
+        width: 468
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a1261fe069e3342ba003fe14a7f782
+      internalID: -236075635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 5380
+        width: 469
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215c5bb4cbd9f0548a218fd94efcbcbf
+      internalID: 1754509978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3330
+        y: 5381
+        width: 475
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d870c7bc1494a743bafb2fc61e355b4
+      internalID: 452156008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 5381
+        width: 472
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea68bd5b690b574d9aec18abe91496e
+      internalID: 1051586681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 5372
+        y: 5381
+        width: 472
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ddd6e23f5901442b5b4670e2f0e892
+      internalID: -2073700812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4351
+        width: 474
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950dd7d6f9fa9bd41a833597f4d8b031
+      internalID: -132964328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 4361
+        width: 469
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e483b1df70b392a43b8b06bcabf1b01d
+      internalID: 2020367884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 4361
+        width: 478
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6652dcc194dc50f43bdf3609fc0f5af1
+      internalID: -296804185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 4361
+        width: 472
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473cc4c8317b208468aee279b5e42dae
+      internalID: 1134811890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 4350
+        width: 480
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa87bdd4c64cdb9478d675f5234d008f
+      internalID: 739235983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 5375
+        y: 4361
+        width: 469
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af6302122bca62418c41ee7a7349c57
+      internalID: 346301240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 3339
+        width: 471
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b6445599e91444b9d252a5456e0381
+      internalID: -1541202194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 3342
+        width: 476
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f36aa1057f79e47b0dfd356b676f0c
+      internalID: -1024816317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 3342
+        width: 472
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e417adbc541400f4fb438b1a255ca232
+      internalID: 369975898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3342
+        width: 477
+        height: 472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5130949ab0a23b4bb88954efc1b3835
+      internalID: -52710098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4348
+        y: 3340
+        width: 476
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0a83f8fcf384745ad1341638661590
+      internalID: 83127465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 5374
+        y: 3342
+        width: 470
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f79a08362adde4d9b33d949ab12cb7
+      internalID: 521111013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2321
+        width: 474
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d937545da6e43fa4aa991de8314584aa
+      internalID: -986764630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 2321
+        width: 469
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832f5fe93ce0a174bb3932617023b768
+      internalID: -1804131053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 2321
+        width: 470
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a21610d1d4ce74a93c41956ca9243c
+      internalID: -1974339160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3331
+        y: 2321
+        width: 474
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc6b37cfa568f64e975963f651bbf86
+      internalID: -829978154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 2319
+        width: 480
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db04e98f2e947c4c9f1be4e5c39b0c2
+      internalID: 93814797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 5377
+        y: 2321
+        width: 467
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92b3384d5c66d94a89c2f3a29c29485
+      internalID: 1201984935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1298
+        width: 466
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786efe7b135d6db4aa2f44fee8781557
+      internalID: -808723034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1301
+        width: 472
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ce8018f38d4ff4d87bdf2ef4f34974
+      internalID: -792937268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 1301
+        width: 470
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9411d42bad468b244bfcb78eb0431632
+      internalID: 172750496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 3331
+        y: 1301
+        width: 474
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ba789a0a2cd0b45a694bfa6f745666
+      internalID: -1813654343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 4347
+        y: 1301
+        width: 477
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc80c8faec8373342806da17d7579a81
+      internalID: 449398965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 5374
+        y: 1301
+        width: 470
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5632ab74aedf28241b99e4581c007bb3
+      internalID: -1919545305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 282
+        width: 469
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90388d7b34b8ea845a56deb18c869eb7
+      internalID: 653824151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 282
+        width: 469
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e84598ce2a2782499f75ae32cd7d5c6
+      internalID: -312309753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 282
+        width: 470
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4e5a24b20b2504bad04f90ee4c551f
+      internalID: -1232415009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lettuce spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 3339
+        y: 282
+        width: 466
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff66839914125b4bb539b169382546b
+      internalID: 1450776259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      lettuce spritesheet_0: -1902780107
+      lettuce spritesheet_1: -181480838
+      lettuce spritesheet_10: 1134811890
+      lettuce spritesheet_11: 739235983
+      lettuce spritesheet_12: 346301240
+      lettuce spritesheet_13: -1541202194
+      lettuce spritesheet_14: -1024816317
+      lettuce spritesheet_15: 369975898
+      lettuce spritesheet_16: -52710098
+      lettuce spritesheet_17: 83127465
+      lettuce spritesheet_18: 521111013
+      lettuce spritesheet_19: -986764630
+      lettuce spritesheet_2: -236075635
+      lettuce spritesheet_20: -1804131053
+      lettuce spritesheet_21: -1974339160
+      lettuce spritesheet_22: -829978154
+      lettuce spritesheet_23: 93814797
+      lettuce spritesheet_24: 1201984935
+      lettuce spritesheet_25: 1276432648
+      lettuce spritesheet_26: -808723034
+      lettuce spritesheet_27: -792937268
+      lettuce spritesheet_28: 172750496
+      lettuce spritesheet_29: -1813654343
+      lettuce spritesheet_3: 1754509978
+      lettuce spritesheet_30: 449398965
+      lettuce spritesheet_31: -1919545305
+      lettuce spritesheet_32: 653824151
+      lettuce spritesheet_33: -312309753
+      lettuce spritesheet_34: -1232415009
+      lettuce spritesheet_35: 1450776259
+      lettuce spritesheet_36: -972470114
+      lettuce spritesheet_4: 452156008
+      lettuce spritesheet_5: 1051586681
+      lettuce spritesheet_6: -2073700812
+      lettuce spritesheet_7: -132964328
+      lettuce spritesheet_8: 2020367884
+      lettuce spritesheet_9: -296804185
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
