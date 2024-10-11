@@ -29,6 +29,6 @@ This free and fun city building game "City Island 5 - Building Simulation" Guara
     
  
 # Screenshots
-![image](https://github.com/kenjitakuma777/City-Island-5/blob/master/Assets/Board/1.webp)
-![image](https://github.com/kenjitakuma777/City-Island-5/blob/master/Assets/Board/2.webp)
+![image](https://github.com/kowalewskiadrian/City-Island-5/blob/main/Assets/Board/1.webp)
+![image](https://github.com/kowalewskiadrian/City-Island-5/blob/main/Assets/Board/2.webp)
 
