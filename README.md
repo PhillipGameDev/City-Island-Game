@@ -1,20 +1,34 @@
+# City Island 5 - Building SimComplete
+Skyline Unleashed: Build and Explore - Leisure Offline City Building Tycoon Simulation
+-- Experience unprecedented urban construction --
+Explore Sparkling Society's innovative city-building game "City Island 5 - Simulated Architecture" As individual islands --  Mayor of Upper Town, you will embark on an exploration of the world -- ? and unlock amazing new islands to build thriving cities. "City Island 5" Offering a unique experience that expands views and skylines across the various islands, each with a unique theme and terrain. In the absence of Internet -- ? or Wi-Fi connection to enjoy this charming city game and on mobile devices -- ? Play this casual city building game series!
 
+--? Turning a village into a sprawling metropolis --?
 
-# Undercooked
+Start with a humble village. As you place more buildings, -- ? and unlock new islands --  Watch your city grow. Free offline City Island Simulation games offer a myriad of missions -- ? and rich content to ensure endless entertainment. Explore neighboring towns, or invite friends to visit your -- 
 
-Cooking has never been so killer. Join our kawaii dog chef in this not-so-cozy cooking game with a twist: _you’re_ the one on the chopping block. 
+--? Purposeful urban architecture that brings endless fun --?
 
-Made for [GMTK Game Jam 2023](https://itch.io/jam/gmtk-2023). (Theme: _Roles Reversed_)
+This free and fun city building game "City Island 5 - Building Simulation" Guarantee that you will never be bored --  This island city building game has hundreds of buildings to unlock -- ? and dozens of missions to generate the treasure chest -- Packed with amazing rewards, this island city building game encourages you to design and develop cities as you see them. Working with friends -- ?, immerse yourself in this delightful tycoon simulation game with tons of cool buildings and islands to unlock. Collect money -- ?, formulate the development and design strategy of the city according to their own inner situation. ❤
 
-## Play it here: https://engineereng.itch.io/undercooked-gmtk-2023
-![cheese minigame](https://github.com/engineereng/Undercooked/assets/38707101/7b55480b-8392-43e3-8554-6607849a9016)
+"City Island 5 - Simulated Architecture" City Construction Game Features --
 
-Keyboard Controls
-- Mash **Space Bar** to hold on tight
-- Use **A and D** to dodge
-Controller Controls
-- Mash **A button** to hold on tight
-- Use **left stick** to dodge
+▶ Participate in a comprehensive build simulation: collect, upgrade, decorate and explore -- 
 
+▶ Earn a treasure chest full of rewards -- 
 
-![lettuce minigame](https://github.com/engineereng/Undercooked/assets/38707101/bdf7a847-06f0-4834-9ddc-6e509189f21f)
+▶ Offline or online games without internet connection -- 
+
+▶ On dozens of fascinating islands --  Rediscover the joys of city building!
+
+▶ Build, customize and observe other players' cities -- 
+
+▶ Share your feedback and rate us to help us improve! -- 
+
+# New Features
+    
+ 
+# Screenshots
+![image](https://github.com/kenjitakuma777/City-Island-5/blob/master/Assets/Board/1.webp)
+![image](https://github.com/kenjitakuma777/City-Island-5/blob/master/Assets/Board/2.webp)
+
